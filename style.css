@@ -1,0 +1,94 @@
+body {
+    overflow-x: hidden;
+    cursor: none;
+}
+.hero img {
+    width: 100%;
+    height: 100vh;
+    filter: grayscale(0.8) opacity(0.8);
+}
+.nav-link {
+    margin-top: 5px;
+}
+label{
+    display:flex;
+     flex-direction:column;
+     width:70px;
+     cursor:pointer;
+   }
+   
+   label span{
+     background: black;
+     border-radius:10px;
+     height:7px;
+     margin: 7px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   input[type="checkbox"]{
+     display:none;
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(8px,0px)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(30px,-11px) rotatez(45deg);
+   
+   }
+   .open {
+       z-index: 99999999;
+       cursor: none;
+   }
+   .cursor {
+       width: 3rem;
+       height: 3rem;
+       background-color: black;
+       border-radius: 50%;
+       position: absolute;
+       transform: translate(-50%, -50%);
+       pointer-events: none;
+       transition: all 700ms ease;
+       transition-property: background, transform;
+       transform-origin: 100% 100%;
+       backdrop-filter: blur(3px);
+       z-index: 999;
+   }
+   .hover3 {
+       transform: scale(2);
+       background-color: #f05454;
+   }
+   
+   
